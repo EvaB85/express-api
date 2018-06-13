@@ -1,0 +1,21 @@
+[
+  {
+    "foods": "apples",
+    "color": "red"
+    {
+      "foods": "veggies",
+      "color": "green"
+    }
+    {
+      "foods": "plum",
+      "color": "purple"
+    }
+    {
+      "foods": "blueberries",
+      "color": "blue"
+    }{
+      "foods": "avocado",
+      "color": "green"
+    }
+  }
+]
