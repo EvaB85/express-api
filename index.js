@@ -22,7 +22,7 @@ app.get('/foods', function(req, res) {
   res.render('foods', {foods: foods})
 });
 
-// POST /foods - as a new foods
+// POST /foods - adds a new food
 app.post('/foods', function(req, res) {
   var foods = fs.readFileSync('./data.json');
   foods = JSON.parse(foods);
@@ -32,7 +32,7 @@ app.post('/foods', function(req, res) {
   console.log(req.body)
 });
 
-//TODO: GET /foods/:id - gets one foods
+//GET /foods/:id - gets one food
 app.get('/foods/:id', function(req, res) {
   var foods = fs.readFileSync('./data.json');
   foods = JSON.parse(foods);
@@ -44,7 +44,7 @@ app.get('/foods/:id', function(req, res) {
   }
 });
 
-//TODO: PUT /foods/:id - updates one foods
+//PUT /foods/:id - updates one food
 app.post('/foods/new', function(req, res) {
   var foods = fs.readFileSync('./data.json');
   foods = JSON.parse(foods);
@@ -53,8 +53,8 @@ app.post('/foods/new', function(req, res) {
   res.redirect('/foods');
 });
 
-//TODO: DELETE /foods/:id - delete one foods
-app.delete(app.de '/foods/:name', function(req, res) {
+//DELETE /foods/:id - deletes one food
+app.delete(app.de '/foods/:id', function(req, res) {
   var foodsToDelete = req.params.name;
   res.send({message: 'you did it!'});
 });
