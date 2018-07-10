@@ -50,7 +50,7 @@ app.get('/foods/:id/edit', function(req, res){
 })
 
 //PUT /foods/:id - UPDATES ONE food
-app.post('/foods/new', function(req, res) {
+app.put('/foods/new', function(req, res) {
   console.log('foods/new post hit')
 var foods = fs.readFileSync('./data.json');
 foods = JSON.parse(foods);

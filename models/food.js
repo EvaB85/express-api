@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var foodSchema = Schema({
   food: String,
-  color: String
+  color: String,
 });
 
 var Food = mongoose.model('Food', foodSchema);
