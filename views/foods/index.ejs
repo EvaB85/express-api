@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index Page</title>
+  </head>
+  <body>
+    <h1>All the foods</h1>
+    <a href="/foods/new">New Food</a>
+    <ul>
+      <% foods.forEach(function(food, i) { %>
+        <li><a href="/foods/<%= food._id %>"><%= food.food %></a> is a <%= food.color %> food! <a class="delete" href="/foods/<%= food._id %>">Delete</a></li>
+        <% }); %>
+    </ul>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
